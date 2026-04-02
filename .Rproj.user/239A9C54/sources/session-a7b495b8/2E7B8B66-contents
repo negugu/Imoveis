@@ -1,0 +1,31 @@
+
+library(tidyverse)
+
+dados = read.csv2("imoveis.csv")
+
+#transformar em numerico a variavel metragem
+dados = dados %>% mutate(metragem = as.numeric(metragem))
+
+
+#### análise descritiva ####
+resumo = summary(dados)
+
+#histograma do preco dos imóveis
+dados %>% 
+  ggplot(aes(x = preco))+
+  geom_histogram()
+
+
+#dispersão metragem vc metragem
+
+dados %>% ggplot(aes(x=  metragem, y = imposto_anual))+
+  geom_point()
+
+
+
+
+
+
+
+
+
