@@ -9,5 +9,8 @@ dados = dados %>% mutate(metragem = as.numeric(metragem))
 
 # Gráficos
 
+dados %>% ggplot(aes(x = metragem))+
+  geom_histogram()
+
 
 # Medidas
