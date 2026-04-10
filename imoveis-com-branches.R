@@ -14,3 +14,7 @@ dados %>% ggplot(aes(x = metragem))+
 
 
 # Medidas
+
+media = mean(dados$imposto_anual)
+mediana = median(dados$imposto_anual)
+desvio_padrao = sd(dados$imposto_anual)
